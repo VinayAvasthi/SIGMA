@@ -1,0 +1,13 @@
+flowchart TD
+A[Detected Segment] --> B[Frequency Features]
+A --> C[Power Features]
+A --> D[Time Features]
+A --> E[Spectral Features]
+A --> F[Modulation Features]
+B --> G[Parameter Estimator]
+C --> G
+D --> G
+E --> G
+F --> G
+G --> H[Units + Method + Confidence]
+H --> I[Structured Signal Result]

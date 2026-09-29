@@ -1,0 +1,12 @@
+flowchart TD
+A[Processed Signal] --> B[Estimate Noise Floor]
+B --> C[Calculate Spectral/Time Features]
+C --> D{Detection Method}
+D -->|Energy| E[Energy Threshold]
+D -->|Spectral| F[Peak/Region Detection]
+D -->|Time-Frequency| G[Spectrogram Regions]
+E --> H[Merge Candidate Regions]
+F --> H
+G --> H
+H --> I[Minimum Duration/Bandwidth Rules]
+I --> J[Detected Segments]

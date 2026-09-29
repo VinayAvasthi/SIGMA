@@ -1,0 +1,44 @@
+erDiagram
+FILES ||--o{ ANALYSES : contains
+ANALYSES ||--o{ SIGNAL_SEGMENTS : detects
+SIGNAL_SEGMENTS ||--o{ PARAMETERS : has
+SIGNAL_SEGMENTS ||--o{ CLASSIFICATIONS : receives
+ANALYSES ||--o{ REPORTS : generates
+FILES {
+ string id
+ string filename
+ string format
+ string checksum
+}
+ANALYSES {
+ string id
+ string file_id
+ string status
+ string configuration
+}
+SIGNAL_SEGMENTS {
+ string id
+ string analysis_id
+ float start_time
+ float end_time
+}
+PARAMETERS {
+ string id
+ string segment_id
+ string name
+ float value
+ string unit
+}
+CLASSIFICATIONS {
+ string id
+ string segment_id
+ string model_version
+ string label
+ float confidence
+}
+REPORTS {
+ string id
+ string analysis_id
+ string format
+ string location
+}

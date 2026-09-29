@@ -1,0 +1,16 @@
+flowchart TD
+A[Upload IQ/WAV] --> B[Validate File]
+B --> C[Parse Metadata]
+C --> D[Decode to Common SignalRecord]
+D --> E[Preprocess]
+E --> F[FFT / PSD / Time-Frequency Analysis]
+F --> G[Detect Candidate Signals]
+G --> H[Segment Signals]
+H --> I[Extract Features]
+I --> J[Estimate Parameters]
+I --> K[Optional ML Classification]
+J --> L[Validate + Attach Provenance]
+K --> L
+L --> M[Visualize]
+M --> N[JSON/API Output]
+M --> O[PDF Report]

@@ -1,0 +1,10 @@
+flowchart TB
+USER[User Browser] --> FRONT[Frontend]
+FRONT --> API[Backend API]
+API --> QUEUE[Job Queue]
+QUEUE --> WORKER[Signal Analysis Worker]
+WORKER --> STORAGE[(Object/File Storage)]
+WORKER --> DB[(Database)]
+WORKER --> MODEL[ML Model Runtime]
+API --> DB
+API --> STORAGE

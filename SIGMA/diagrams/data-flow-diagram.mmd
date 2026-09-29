@@ -1,0 +1,12 @@
+flowchart LR
+RAW[Raw IQ/WAV] --> ING[Ingestion]
+ING --> PROC[Processed Signal]
+PROC --> SEG[Detected Segments]
+SEG --> FEAT[Features]
+FEAT --> PARAM[Parameters]
+FEAT --> PRED[ML Predictions]
+PARAM --> RESULT[Analysis Result]
+PRED --> RESULT
+RESULT --> JSON[JSON/API]
+RESULT --> PDF[Report]
+RESULT --> DB[(Database)]

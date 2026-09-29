@@ -1,0 +1,28 @@
+{
+  "analysis_id": "ANL-000001",
+  "source": {
+    "filename": "sample.iq",
+    "format": "IQ",
+    "checksum": "sha256:..."
+  },
+  "configuration": {
+    "fft_size": 4096,
+    "window": "hann",
+    "overlap": 0.5
+  },
+  "signals": [
+    {
+      "segment_id": "SEG-001",
+      "start_time_s": 1.2,
+      "end_time_s": 3.8,
+      "frequency_low_hz": null,
+      "frequency_high_hz": null,
+      "parameters": {},
+      "classification": null
+    }
+  ],
+  "provenance": {
+    "software_version": "0.1.0",
+    "created_at": "ISO-8601"
+  }
+}

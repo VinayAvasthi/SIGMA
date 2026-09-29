@@ -1,0 +1,9 @@
+flowchart TD
+A[WAV File] --> B[Read WAV Header]
+B --> C[Validate Format]
+C --> D[Decode Channels]
+D --> E[Common Signal Representation]
+E --> F[Preprocessing]
+F --> G[FFT / PSD / Spectrogram]
+G --> H[Detection]
+H --> I[Feature + Parameter Extraction]

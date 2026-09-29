@@ -1,0 +1,14 @@
+flowchart TB
+UI[Web Dashboard] --> API[API / Orchestrator]
+API --> ING[Ingestion]
+ING --> DSP[Signal Processing Engine]
+DSP --> DET[Signal Detection]
+DET --> FE[Feature Extraction]
+FE --> PE[Parameter Extraction]
+FE --> ML[AI / ML Engine]
+PE --> RES[Result Store]
+ML --> RES
+RES --> API
+API --> REPORT[Report Generator]
+API --> UI
+STORE[(File / Metadata Storage)] --> ING

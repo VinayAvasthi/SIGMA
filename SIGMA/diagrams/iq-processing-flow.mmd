@@ -1,0 +1,11 @@
+flowchart TD
+A[IQ File] --> B[Header/Format Validation]
+B --> C[Decode I/Q Samples]
+C --> D[Complex Signal x[n]=I+jQ]
+D --> E[Metadata Association]
+E --> F[DC Removal]
+F --> G[Filtering / Resampling]
+G --> H[Windowing]
+H --> I[FFT / PSD]
+I --> J[Detection]
+J --> K[Feature + Parameter Extraction]
